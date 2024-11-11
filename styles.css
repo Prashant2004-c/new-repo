@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #FDF3E7;
+}
+
+.container {
+    background-color: #FDF3E7;
+    padding: 3rem 0; /* Add padding to the top */
+}
+
+.upper-div {
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;    
+    align-items: center; 
+    margin-bottom: 2rem;
+    gap: 40px;
+}
+
+.first, .second, .third {
+    border: 1px solid transparent; /* Set a transparent border for consistent height */
+    width: 70%;
+    padding: 25px;
+    border-radius: 3rem;
+    box-shadow: 0.2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.first {
+    background: rgb(250,212,192);
+    background: linear-gradient(90deg, rgba(250,212,192,1) 0%, rgba(228,219,218,1) 100%);
+}
+
+.second {
+    background: rgb(241,246,235);
+    background: linear-gradient(90deg, rgba(241,246,235,1) 0%, rgba(164,217,177,1) 100%);
+}
+
+.third {
+    background: rgb(250,212,192);
+    background: linear-gradient(90deg, rgba(250,212,192,1) 0%, rgba(228,219,218,1) 100%);
+}
+
+.h2-l {
+    position: absolute;
+    top: -1.3rem;
+    left: 5rem;   
+}
+
+.gif-l, .gif-r {
+    width: 20%;
+    height: auto; /* Maintain aspect ratio */
+    transform: rotate(10deg);
+}
+
+.h2-r {
+    position: absolute;
+    top: -1.7rem;
+    right: 5.5rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .upper-div {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+
+    .first, .second, .third {
+        width: 90%; /* Make sections full width on small screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .gif-l, .gif-r {
+        display: none; /* Hide images on smaller screens */
+    }
+
+    .h2-l, .h2-r {
+        position: static; /* Reset positioning for headings */
+        text-align: center; /* Center align headings */
+        margin-bottom: 1rem; /* Add margin below headings */
+    }
+}
+
+@media (max-width: 480px) {
+    .h2-l, .h2-r {
+        font-size: 1.5em; /* Reduce heading size */
+    }
+
+    .first_text, .second_text, .third_text {
+        font-size: 0.9em; /* Adjust text size for smaller screens */
+    }
+}
